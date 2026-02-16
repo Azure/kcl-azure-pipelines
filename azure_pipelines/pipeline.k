@@ -1,4 +1,5 @@
 import .stage
+import .job
 
 schema Pipeline:
     """
@@ -18,7 +19,7 @@ schema Pipeline:
 
     stages: [stage.Stage | stage.StagesTemplate]
     extends?: any
-    jobs?: [any]
+    jobs?: [job.Job | any]
     steps?: [any]
 
     check:
