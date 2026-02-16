@@ -1,4 +1,5 @@
 import .job
+import .tpl
 
 schema Stage:
     """
@@ -11,15 +12,7 @@ schema Stage:
     dependsOn?: str | [str]
     condition?: str
     variables?: any | [any]
-    jobs?: [job.Job | any]
+    jobs?: [job.Job | tpl.Template]
     lockBehavior?: "sequential" | "runLatest"
     trigger?: "manual" | "automatic"
     isSkippable?: bool
-
-schema StagesTemplate:
-    """
-    https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/stages-template
-    """
-
-    template: str
-    parameters?: {str: any}

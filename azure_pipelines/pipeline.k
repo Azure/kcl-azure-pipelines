@@ -1,5 +1,6 @@
-import .stage
 import .job
+import .stage
+import .tpl
 
 schema Pipeline:
     """
@@ -17,7 +18,7 @@ schema Pipeline:
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
 
-    stages: [stage.Stage | stage.StagesTemplate]
+    stages: [stage.Stage | tpl.Template]
     extends?: any
     jobs?: [job.Job | any]
     steps?: [any]
