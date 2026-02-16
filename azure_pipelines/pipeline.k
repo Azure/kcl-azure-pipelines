@@ -1,18 +1,8 @@
-"""
-Azure Pipeline schema definition
-
-See: https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/pipeline
-"""
+import .stage
 
 schema Pipeline:
     """
-    Azure Pipeline definition. A pipeline is one or more stages that describe a CI/CD process.
-
-    Supports four implementations:
-    - stages: Pipeline with explicit stages
-    - extends: Pipeline extending a template
-    - jobs: Pipeline with jobs and one implicit stage
-    - steps: Pipeline with steps and one implicit job
+    https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/pipeline
     """
 
     name?: str
@@ -21,13 +11,13 @@ schema Pipeline:
     parameters?: [any]
     pr?: str | [str] | any
     schedules?: [any]
-    resources?: Resources
+    resources?: any
     variables?: any | [any]
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
 
-    stages?: [any]
-    extends?: Extends
+    stages: [stage.Stage | stage.StagesTemplate]
+    extends?: any
     jobs?: [any]
     steps?: [any]
 
