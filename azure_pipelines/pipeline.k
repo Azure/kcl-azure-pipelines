@@ -2,6 +2,7 @@ import .job
 import .stage
 import .tpl
 import .variable
+import .schedules
 
 schema Pipeline:
     """
@@ -13,7 +14,7 @@ schema Pipeline:
     trigger?: str | [str] | any
     parameters?: [any]
     pr?: str | [str] | any
-    schedules?: [any]
+    schedules?: [schedules.Cron]
     resources?: any
     variables?: variable.Variables
     lockBehavior?: "sequential" | "runLatest"
