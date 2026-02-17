@@ -1,3 +1,5 @@
+import .variable
+
 schema Job:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/jobs-job
@@ -10,7 +12,7 @@ schema Job:
     continueOnError?: str
     timeoutInMinutes?: str
     cancelTimeoutInMinutes?: str
-    variables?: any | [any]
+    variables?: variable.Variables
     strategy?: any
     pool?: str | any
     container?: str | any

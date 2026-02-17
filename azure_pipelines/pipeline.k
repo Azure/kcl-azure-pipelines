@@ -1,6 +1,7 @@
 import .job
 import .stage
 import .tpl
+import .variable
 
 schema Pipeline:
     """
@@ -14,7 +15,7 @@ schema Pipeline:
     pr?: str | [str] | any
     schedules?: [any]
     resources?: any
-    variables?: any | [any]
+    variables?: variable.Variables
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
 

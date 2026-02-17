@@ -1,5 +1,6 @@
 import .job
 import .tpl
+import .variable
 
 schema Stage:
     """
@@ -11,7 +12,7 @@ schema Stage:
     pool?: str | any
     dependsOn?: str | [str]
     condition?: str
-    variables?: any | [any]
+    variables?: variable.Variables
     jobs?: [job.Job | tpl.Template]
     lockBehavior?: "sequential" | "runLatest"
     trigger?: "manual" | "automatic"
