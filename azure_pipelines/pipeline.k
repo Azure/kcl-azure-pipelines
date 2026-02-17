@@ -3,6 +3,8 @@ import .stage
 import .tpl
 import .variable
 import .schedules
+import .steps
+import .trigger
 
 schema Pipeline:
     """
@@ -11,7 +13,7 @@ schema Pipeline:
 
     name?: str
     pool?: str | any
-    trigger?: str | [str] | any
+    trigger?: trigger.Trigger
     parameters?: [any]
     pr?: str | [str] | any
     schedules?: [schedules.Cron]
@@ -23,7 +25,7 @@ schema Pipeline:
     stages: [stage.Stage | tpl.Template]
     extends?: any
     jobs?: [job.Job | any]
-    steps?: [any]
+    steps?: [steps.Step]
 
     check:
         stages or extends or jobs or steps, "Pipeline must specify one of: stages, extends, jobs, or steps"
