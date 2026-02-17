@@ -1,6 +1,5 @@
 import .variable
-import .steps.script
-import .steps.task
+import .steps
 
 schema Job:
     """
@@ -21,4 +20,4 @@ schema Job:
     services?: {str: str}
     workspace?: any
     uses?: any
-    steps?: [script.Script | task.Task | any]
+    steps?: [steps.Step]
