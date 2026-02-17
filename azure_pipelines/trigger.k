@@ -1,22 +1,22 @@
-type Trigger = "none" | [str] | TriggerFull
+type Trigger = "none" | "true" | TriggerFull
 
 schema TriggerFull:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/trigger
     """
 
-    batch?: bool
+    enabled?: bool
     branches?: Branches
-    paths?: IncludeExclude
-    tags?: IncludeExclude
+    stages?: [str]
+    tags?: [str]
+
+"""
+https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/include-exclude-filters
+"""
 
 type Branches = [str] | IncludeExclude
 
 schema IncludeExclude:
-    """
-    https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/include-exclude-filters
-    """
-
     include?: [str]
     exclude?: [str]
 
