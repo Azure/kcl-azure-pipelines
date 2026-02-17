@@ -1,12 +1,14 @@
-import azure_pipelines.pipeline
 import azure_pipelines.job
+import azure_pipelines.pipeline
 import azure_pipelines.stage
 import azure_pipelines.steps
+import azure_pipelines.trigger
 
 myPipeline: pipeline.Pipeline {
     name = "CI-Build"
-    trigger = ["main", "develop"]
-
+    trigger= trigger.TriggerFull {
+        branches = ["main", "develop"]
+    }
     stages = [
         stage.Stage {
             stage = "Build"

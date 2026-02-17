@@ -1,3 +1,5 @@
+import .trigger
+
 schema Cron:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/schedules-cron
@@ -5,6 +7,6 @@ schema Cron:
 
     cron: str
     displayName?: str
-    branches?: any
+    branches?: trigger.Branches
     batch?: bool
     always?: bool
