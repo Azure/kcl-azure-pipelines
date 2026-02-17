@@ -1,14 +1,37 @@
 import azure_pipelines.job
 import azure_pipelines.pipeline
+import azure_pipelines.schedules
 import azure_pipelines.stage
 import azure_pipelines.steps
 import azure_pipelines.trigger
+import azure_pipelines.variable
 
 myPipeline: pipeline.Pipeline {
     name = "CI-Build"
-    trigger= trigger.TriggerFull {
-        branches = ["main", "develop"]
+    trigger = trigger.TriggerFull {
+        branches = trigger.IncludeExclude {
+            include = ["main", "develop", "features/*"]
+            exclude = ["features/experimental/*"]
+        }
     }
+    schedules = [
+        schedules.Cron {
+            cron = "0 0 * * 0"
+            displayName = "Weekly Sunday build"
+            branches = ["main"]
+            always = True
+        }
+    ]
+    variables = [
+        variable.Name {
+            name = "buildConfiguration"
+            value = "Release"
+            readonly = True
+        }
+        variable.Group {
+            group = "production-secrets"
+        }
+    ]
     stages = [
         stage.Stage {
             stage = "Build"

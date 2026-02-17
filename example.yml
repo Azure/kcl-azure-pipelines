@@ -1,8 +1,23 @@
 name: CI-Build
 trigger:
   branches:
+    include:
+    - main
+    - develop
+    - features/*
+    exclude:
+    - features/experimental/*
+schedules:
+- cron: '0 0 * * 0'
+  displayName: Weekly Sunday build
+  branches:
   - main
-  - develop
+  always: true
+variables:
+- name: buildConfiguration
+  value: Release
+  readonly: true
+- group: production-secrets
 stages:
 - stage: Build
   displayName: Build Stage
