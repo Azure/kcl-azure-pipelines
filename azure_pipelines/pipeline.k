@@ -1,5 +1,6 @@
 import .job
 import .parameters
+import .pr
 import .schedules
 import .stage
 import .steps
@@ -16,7 +17,7 @@ schema Pipeline:
     pool?: str | any
     trigger?: trigger.Trigger
     parameters?: [parameters.Parameter]
-    pr?: str | [str] | any
+    pr?: pr.PR
     schedules?: [schedules.Cron]
     resources?: any
     variables?: variable.Variables

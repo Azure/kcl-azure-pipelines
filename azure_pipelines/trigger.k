@@ -1,3 +1,5 @@
+import .include_exclude_filters
+
 type Trigger = "none" | "true" | TriggerFull
 
 schema TriggerFull:
@@ -10,13 +12,5 @@ schema TriggerFull:
     stages?: [str]
     tags?: [str]
 
-"""
-https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/include-exclude-filters
-"""
-
-type Branches = [str] | IncludeExclude
-
-schema IncludeExclude:
-    include?: [str]
-    exclude?: [str]
+type Branches = [str] | include_exclude_filters.IncludeExcludeFilters
 

@@ -1,3 +1,4 @@
+import azure_pipelines.include_exclude_filters
 import azure_pipelines.job
 import azure_pipelines.pipeline
 import azure_pipelines.schedules
@@ -9,7 +10,7 @@ import azure_pipelines.variable
 myPipeline: pipeline.Pipeline {
     name = "CI-Build"
     trigger = trigger.TriggerFull {
-        branches = trigger.IncludeExclude {
+        branches = include_exclude_filters.IncludeExcludeFilters {
             include = ["main", "develop", "features/*"]
             exclude = ["features/experimental/*"]
         }
