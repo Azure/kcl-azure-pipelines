@@ -1,10 +1,11 @@
 import .job
-import .stage
-import .tpl
-import .variable
+import .parameters
 import .schedules
+import .stage
 import .steps
+import .tpl
 import .trigger
+import .variable
 
 schema Pipeline:
     """
@@ -14,7 +15,7 @@ schema Pipeline:
     name?: str
     pool?: str | any
     trigger?: trigger.Trigger
-    parameters?: [any]
+    parameters?: [parameters.Parameter]
     pr?: str | [str] | any
     schedules?: [schedules.Cron]
     resources?: any

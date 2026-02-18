@@ -13,3 +13,6 @@ You are an expert in KCL (KCL Configuration Language), an open-source configurat
 
 # CLI tool
 [cli overview](https://www.kcl-lang.io/docs/tools/cli/kcl/overview)
+
+# Requirements
+- imports should be sorted
