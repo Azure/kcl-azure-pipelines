@@ -1,6 +1,7 @@
 import .job
 import .parameters
 import .pr
+import .resources
 import .schedules
 import .stage
 import .steps
@@ -19,7 +20,7 @@ schema Pipeline:
     parameters?: [parameters.Parameter]
     pr?: pr.PR
     schedules?: [schedules.Cron]
-    resources?: any
+    resources?: resources.Resources
     variables?: variable.Variables
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
