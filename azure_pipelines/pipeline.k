@@ -1,7 +1,7 @@
 import .job
 import .parameters
 import .pr
-import .resources
+import .resources.resources
 import .schedules
 import .stage
 import .steps
