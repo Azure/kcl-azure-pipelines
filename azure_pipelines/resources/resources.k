@@ -2,6 +2,7 @@ import .build
 import .container
 import .pipeline
 import .repository
+import .webhook
 
 schema Resources:
     """
@@ -12,5 +13,5 @@ schema Resources:
     containers?: [container.Container]
     pipelines?: [pipeline.Pipeline]
     repositories?: [repository.Repository]
-    webhooks?: [any]
+    webhooks?: [webhook.Webhook]
     packages?: [any]
