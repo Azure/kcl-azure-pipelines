@@ -1,5 +1,6 @@
 import .build
 import .container
+import .pipeline
 
 schema Resources:
     """
@@ -8,7 +9,7 @@ schema Resources:
 
     builds?: [build.Build]
     containers?: [container.Container]
-    pipelines?: [any]
+    pipelines?: [pipeline.Pipeline]
     repositories?: [any]
     webhooks?: [any]
     packages?: [any]
