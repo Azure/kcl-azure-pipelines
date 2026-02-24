@@ -1,5 +1,6 @@
 import .build
 import .container
+import .package
 import .pipeline
 import .repository
 import .webhook
@@ -14,4 +15,4 @@ schema Resources:
     pipelines?: [pipeline.Pipeline]
     repositories?: [repository.Repository]
     webhooks?: [webhook.Webhook]
-    packages?: [any]
+    packages?: [package.Package]
