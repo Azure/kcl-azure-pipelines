@@ -1,5 +1,6 @@
-import .variable
+import .pool
 import .steps
+import .variable
 
 schema Job:
     """
@@ -15,7 +16,7 @@ schema Job:
     cancelTimeoutInMinutes?: str
     variables?: variable.Variables
     strategy?: any
-    pool?: str | any
+    pool?: str | pool.Pool
     container?: str | any
     services?: {str: str}
     workspace?: any

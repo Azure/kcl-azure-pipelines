@@ -1,4 +1,5 @@
 import .job
+import .pool
 import .tpl
 import .variable
 
@@ -9,7 +10,7 @@ schema Stage:
 
     stage: str
     displayName?: str
-    pool?: str | any
+    pool?: str | pool.Pool
     dependsOn?: str | [str]
     condition?: str
     variables?: variable.Variables
