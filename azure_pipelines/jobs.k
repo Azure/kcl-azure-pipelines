@@ -3,6 +3,7 @@ import .pool
 import .steps
 import .strategy
 import .variable
+import .workspace
 
 schema Container:
     """
@@ -35,6 +36,6 @@ schema Job:
     pool?: str | pool.Pool
     container?: str | Container
     services?: {str: str}
-    workspace?: any
+    workspace?: workspace.Workspace
     uses?: any
     steps?: [steps.Step]
