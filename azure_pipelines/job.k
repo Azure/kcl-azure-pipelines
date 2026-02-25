@@ -1,5 +1,6 @@
 import .pool
 import .steps
+import .strategy
 import .variable
 
 schema Job:
@@ -15,7 +16,7 @@ schema Job:
     timeoutInMinutes?: str
     cancelTimeoutInMinutes?: str
     variables?: variable.Variables
-    strategy?: any
+    strategy?: strategy.Strategy
     pool?: str | pool.Pool
     container?: str | any
     services?: {str: str}
