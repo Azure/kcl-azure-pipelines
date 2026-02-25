@@ -1,3 +1,4 @@
+import .extends
 import .job
 import .parameters
 import .pool
@@ -27,7 +28,7 @@ schema Pipeline:
     appendCommitMessageToRunName?: bool
 
     stages: [stage.Stage | tpl.Template]
-    extends?: any
+    extends?: extends.Extends
     jobs?: [job.Job | any]
     steps?: [steps.Step]
 
