@@ -1,11 +1,11 @@
 import .extends
-import .job
+import .jobs
 import .parameters
 import .pool
 import .pr
 import .resources.resources
 import .schedules
-import .stage
+import .stages
 import .steps
 import .tpl
 import .trigger
@@ -27,9 +27,9 @@ schema Pipeline:
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
 
-    stages: [stage.Stage | tpl.Template]
+    stages: [stages.Stage | tpl.Template]
     extends?: extends.Extends
-    jobs?: [job.Job | any]
+    jobs?: [jobs.Job | any]
     steps?: [steps.Step]
 
     check:

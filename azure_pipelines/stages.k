@@ -1,4 +1,4 @@
-import .job
+import .jobs
 import .pool
 import .tpl
 import .variable
@@ -14,7 +14,7 @@ schema Stage:
     dependsOn?: str | [str]
     condition?: str
     variables?: variable.Variables
-    jobs?: [job.Job | tpl.Template]
+    jobs?: [jobs.Job | tpl.Template]
     lockBehavior?: "sequential" | "runLatest"
     trigger?: "manual" | "automatic"
     isSkippable?: bool

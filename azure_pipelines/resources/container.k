@@ -1,4 +1,5 @@
 import ..include_exclude_filters
+import ..mount_read_only
 
 schema Container:
     """
@@ -20,7 +21,7 @@ schema Container:
     options?: str
     ports?: [str]
     volumes?: [str]
-    mountReadOnly?: MountReadOnly
+    mountReadOnly?: mount_read_only.MountReadOnly
 
 type ContainerTrigger = "none" | "true" | ContainerTriggerFull
 
@@ -31,9 +32,3 @@ schema ContainerTriggerFull:
 
     enabled?: bool
     tags?: [str] | include_exclude_filters.IncludeExcludeFilters
-
-schema MountReadOnly:
-    work?: bool
-    externals?: bool
-    tools?: bool
-    tasks?: bool
