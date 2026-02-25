@@ -1,5 +1,5 @@
 import .extends
-import .jobs
+import .jobs.job
 import .parameters
 import .pool
 import .pr
@@ -29,7 +29,7 @@ schema Pipeline:
 
     stages: [stages.Stage | tpl.Template]
     extends?: extends.Extends
-    jobs?: [jobs.Job | any]
+    jobs?: [job.Job | any]
     steps?: [steps.Step]
 
     check:

@@ -1,5 +1,5 @@
 import azure_pipelines.include_exclude_filters
-import azure_pipelines.jobs
+import azure_pipelines.jobs.job
 import azure_pipelines.pipeline
 import azure_pipelines.schedules
 import azure_pipelines.stages
@@ -39,7 +39,7 @@ myPipeline: pipeline.Pipeline {
             displayName = "Build Stage"
 
             jobs = [
-                jobs.Job {
+                job.Job {
                     job = "BuildJob"
                     displayName = "Build and Test"
                     pool = "ubuntu-latest"
