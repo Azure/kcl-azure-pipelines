@@ -3,6 +3,7 @@ import ..steps
 import ..variable
 import .container
 import .strategy
+import .uses
 import .workspace
 
 schema Job:
@@ -23,5 +24,5 @@ schema Job:
     container?: str | container.Container
     services?: {str: str}
     workspace?: workspace.Workspace
-    uses?: any
+    uses?: uses.Uses
     steps?: [steps.Step]
