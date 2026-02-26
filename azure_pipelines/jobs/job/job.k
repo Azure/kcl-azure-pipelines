@@ -1,10 +1,10 @@
-import ..pool
-import ..steps
-import ..variable
+import ...pool
+import ...steps
+import ...variable
+import ..workspace
 import .container
 import .strategy
 import .uses
-import .workspace
 
 schema Job:
     """

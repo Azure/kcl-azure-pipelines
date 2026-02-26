@@ -1,7 +1,7 @@
 import ...pool
 import ...variable
-import ..container
-import ..uses
+import ..job.container
+import ..job.uses
 import ..workspace
 import .environment
 import .strategy

@@ -1,5 +1,5 @@
 import azure_pipelines.include_exclude_filters
-import azure_pipelines.jobs.job
+import azure_pipelines.jobs.job.job
 import azure_pipelines.pipeline
 import azure_pipelines.schedules
 import azure_pipelines.stages
