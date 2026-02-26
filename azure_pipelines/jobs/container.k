@@ -1,4 +1,4 @@
-import .workspace
+import ..mount_read_only
 
 schema Container:
     """
@@ -12,4 +12,4 @@ schema Container:
     options?: str
     ports?: [str]
     volumes?: [str]
-    mountReadOnly?: any
+    mountReadOnly?: mount_read_only.MountReadOnly
