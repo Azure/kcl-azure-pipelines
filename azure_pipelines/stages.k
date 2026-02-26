@@ -1,4 +1,4 @@
-import .jobs.job.job
+import .jobs.job
 import .pool
 import .tpl
 import .variable

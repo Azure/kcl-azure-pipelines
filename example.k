@@ -1,10 +1,9 @@
 import azure_pipelines.include_exclude_filters
-import azure_pipelines.jobs.job.job
+import azure_pipelines.jobs.job
 import azure_pipelines.pipeline
 import azure_pipelines.schedules
 import azure_pipelines.stages
-import azure_pipelines.steps.script
-import azure_pipelines.steps.task
+import azure_pipelines.steps
 import azure_pipelines.trigger
 import azure_pipelines.variable
 
@@ -46,12 +45,12 @@ myPipeline: pipeline.Pipeline {
                     pool = "ubuntu-latest"
 
                     steps = [
-                        script.Script {
+                        steps.Script {
                             script = "echo 'Starting build process...'"
                             displayName = "Print start message"
                         }
 
-                        task.Task {
+                        steps.Task {
                             task = "NodeTool@0"
                             displayName = "Install Node.js"
                             inputs = {
@@ -59,18 +58,18 @@ myPipeline: pipeline.Pipeline {
                             }
                         }
 
-                        script.Script {
+                        steps.Script {
                             script = "npm install"
                             displayName = "Install dependencies"
                             workingDirectory = "$(Build.SourcesDirectory)"
                         }
 
-                        script.Script {
+                        steps.Script {
                             script = "npm run build"
                             displayName = "Build application"
                         }
 
-                        task.Task {
+                        steps.Task {
                             task = "PublishTestResults@2"
                             displayName = "Publish test results"
                             inputs = {
