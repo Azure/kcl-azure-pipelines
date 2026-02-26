@@ -1,15 +1,9 @@
 import .extends
 import .jobs.deployment.deployment
-import .jobs.job.job
+import .jobs.job
 import .parameters
-import .pool
-import .pr
 import .resources.resources
-import .schedules
-import .stages
 import .steps.steps
-import .tpl
-import .trigger
 import .variable
 
 schema Pipeline:
@@ -18,19 +12,19 @@ schema Pipeline:
     """
 
     name?: str
-    pool?: str | pool.Pool
-    trigger?: trigger.Trigger
+    pool?: str | Pool
+    trigger?: Trigger
     parameters?: [parameters.Parameter]
-    pr?: pr.PR
-    schedules?: [schedules.Cron]
+    pr?: PR
+    schedules?: [Cron]
     resources?: resources.Resources
     variables?: variable.Variables
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
 
-    stages: [stages.Stage | tpl.Template]
+    stages: [Stage | Template]
     extends?: extends.Extends
-    jobs?: [job.Job | deployment.Deployment | tpl.Template]
+    jobs?: [job.Job | deployment.Deployment | Template]
     steps?: [steps.Step]
 
     check:

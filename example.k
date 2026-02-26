@@ -1,22 +1,19 @@
+import azure_pipelines as ap
 import azure_pipelines.include_exclude_filters
 import azure_pipelines.jobs.job
-import azure_pipelines.pipeline
-import azure_pipelines.schedules
-import azure_pipelines.stages
 import azure_pipelines.steps
-import azure_pipelines.trigger
 import azure_pipelines.variable
 
-myPipeline: pipeline.Pipeline {
+myPipeline: ap.Pipeline {
     name = "CI-Build"
-    trigger = trigger.TriggerFull {
+    trigger = ap.TriggerFull {
         branches = include_exclude_filters.IncludeExcludeFilters {
             include = ["main", "develop", "features/*"]
             exclude = ["features/experimental/*"]
         }
     }
     schedules = [
-        schedules.Cron {
+        ap.Cron {
             cron = "0 0 * * 0"
             displayName = "Weekly Sunday build"
             branches = ["main"]
@@ -34,7 +31,7 @@ myPipeline: pipeline.Pipeline {
         }
     ]
     stages = [
-        stages.Stage {
+        ap.Stage {
             stage = "Build"
             displayName = "Build Stage"
 

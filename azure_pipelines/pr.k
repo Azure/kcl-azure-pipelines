@@ -1,5 +1,3 @@
-import .include_exclude_filters
-
 type PR = "none" | [str] | PRFull
 
 schema PRFull:
@@ -8,6 +6,6 @@ schema PRFull:
     """
 
     autoCancel?: bool
-    branches?: include_exclude_filters.IncludeExcludeFilters
-    paths?: include_exclude_filters.IncludeExcludeFilters
+    branches?: IncludeExcludeFilters
+    paths?: IncludeExcludeFilters
     drafts?: bool
