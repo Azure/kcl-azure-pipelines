@@ -1,4 +1,4 @@
-import ...mount_read_only
+import azure_pipelines.mount_read_only
 
 schema Container:
     """

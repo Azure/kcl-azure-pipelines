@@ -1,10 +1,9 @@
-import .extends
-import .jobs.deployment.deployment
-import .jobs.job
-import .parameters
-import .resources.resources
-import .steps.steps
-import .variables
+import azure_pipelines.extends
+import azure_pipelines.jobs.deployment.deployment
+import azure_pipelines.jobs.job
+import azure_pipelines.parameters as params
+import azure_pipelines.resources.resources
+import azure_pipelines.steps.steps
 
 
 schema Pipeline:
@@ -15,11 +14,11 @@ schema Pipeline:
     name?: str
     pool?: str | Pool
     trigger?: Trigger
-    parameters?: [parameters.Parameter]
+    parameters?: [params.Parameter]
     pr?: PR
     schedules?: [Cron]
     resources?: resources.Resources
-    variables?: variables.Variables
+    variables?: Variables
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
 

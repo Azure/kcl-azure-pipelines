@@ -1,10 +1,10 @@
-import ...pool
-import ...steps.steps
-import ...variables
-import ..workspace
-import .container
-import .strategy
-import .uses
+import azure_pipelines.pool
+import azure_pipelines.steps.steps
+import azure_pipelines.variables
+import azure_pipelines.jobs.workspace
+import azure_pipelines.jobs.job.container
+import azure_pipelines.jobs.job.strategy
+import azure_pipelines.jobs.job.uses
 
 schema Job:
     """

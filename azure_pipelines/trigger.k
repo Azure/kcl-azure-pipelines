@@ -1,4 +1,4 @@
-import .include_exclude_filters
+import azure_pipelines.include_exclude_filters
 
 type Branches = [str] | include_exclude_filters.IncludeExcludeFilters
 type Trigger = "none" | [str] | TriggerFull

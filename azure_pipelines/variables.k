@@ -1,4 +1,4 @@
-import .tpl
+import azure_pipelines.tpl
 
 type Variables = {str: str} | [Name | Group | tpl.Template]
 

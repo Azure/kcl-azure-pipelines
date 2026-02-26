@@ -1,4 +1,4 @@
-import .parameters
+import azure_pipelines.parameters
 
 schema Extends:
     """

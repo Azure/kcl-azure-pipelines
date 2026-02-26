@@ -1,4 +1,4 @@
-import .trigger
+import azure_pipelines.trigger
 
 schema Cron:
     """

@@ -1,9 +1,9 @@
-import .build
-import .container
-import .package
-import .pipeline
-import .repository
-import .webhook
+import azure_pipelines.resources.build
+import azure_pipelines.resources.container
+import azure_pipelines.resources.package
+import azure_pipelines.resources.pipeline
+import azure_pipelines.resources.repository
+import azure_pipelines.resources.webhook
 
 schema Resources:
     """

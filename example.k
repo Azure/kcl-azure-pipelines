@@ -2,7 +2,6 @@ import azure_pipelines as ap
 import azure_pipelines.include_exclude_filters
 import azure_pipelines.jobs.job
 import azure_pipelines.steps
-import azure_pipelines.variables
 
 myPipeline: ap.Pipeline {
     name = "CI-Build"
@@ -21,12 +20,12 @@ myPipeline: ap.Pipeline {
         }
     ]
     variables = [
-        variables.Name {
+        ap.Name {
             name = "buildConfiguration"
             value = "Release"
             readonly = True
         }
-        variables.Group {
+        ap.Group {
             group = "production-secrets"
         }
     ]

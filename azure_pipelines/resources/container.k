@@ -1,5 +1,5 @@
-import ..include_exclude_filters
-import ..mount_read_only
+import azure_pipelines.include_exclude_filters
+import azure_pipelines.mount_read_only
 
 schema Container:
     """

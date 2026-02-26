@@ -1,4 +1,4 @@
-import ..include_exclude_filters
+import azure_pipelines.include_exclude_filters
 
 schema Pipeline:
     """

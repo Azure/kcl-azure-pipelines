@@ -1,3 +1,5 @@
+import azure_pipelines.include_exclude_filters
+
 type PR = "none" | [str] | PRFull
 
 schema PRFull:
@@ -6,6 +8,6 @@ schema PRFull:
     """
 
     autoCancel?: bool
-    branches?: IncludeExcludeFilters
-    paths?: IncludeExcludeFilters
+    branches?: include_exclude_filters.IncludeExcludeFilters
+    paths?: include_exclude_filters.IncludeExcludeFilters
     drafts?: bool
