@@ -4,7 +4,8 @@ import .jobs.job
 import .parameters
 import .resources.resources
 import .steps.steps
-import .variable
+import .variables
+
 
 schema Pipeline:
     """
@@ -18,7 +19,7 @@ schema Pipeline:
     pr?: PR
     schedules?: [Cron]
     resources?: resources.Resources
-    variables?: variable.Variables
+    variables?: variables.Variables
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
 

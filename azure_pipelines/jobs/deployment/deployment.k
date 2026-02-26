@@ -1,5 +1,5 @@
 import ...pool
-import ...variable
+import ...variables
 import ..job.container
 import ..job.uses
 import ..workspace
@@ -18,7 +18,7 @@ schema Deployment:
     continueOnError?: str
     timeoutInMinutes?: str
     cancelTimeoutInMinutes?: str
-    variables?: variable.Variables
+    variables?: variables.Variables
     pool?: str | pool.Pool
     environment: str | environment.Environment
     strategy: strategy.Strategy

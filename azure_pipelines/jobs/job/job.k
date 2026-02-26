@@ -1,6 +1,6 @@
 import ...pool
 import ...steps.steps
-import ...variable
+import ...variables
 import ..workspace
 import .container
 import .strategy
@@ -18,7 +18,7 @@ schema Job:
     continueOnError?: str
     timeoutInMinutes?: str
     cancelTimeoutInMinutes?: str
-    variables?: variable.Variables
+    variables?: variables.Variables
     strategy?: strategy.Strategy
     pool?: str | pool.Pool
     container?: str | container.Container
