@@ -1,3 +1,5 @@
+import ap.target
+
 schema ReviewApp:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-review-app
@@ -7,7 +9,7 @@ schema ReviewApp:
     condition?: str
     continueOnError?: bool
     displayName?: str
-    target?: str | any
+    target?: target.Target
     enabled?: bool
     env?: {str: str}
     name?: str

@@ -1,3 +1,5 @@
+import ap.target
+
 schema Script:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-script
@@ -9,7 +11,7 @@ schema Script:
     condition?: str
     continueOnError?: bool
     displayName?: str
-    target?: str | any
+    target?: target.Target
     enabled?: bool
     env?: {str: str}
     name?: str

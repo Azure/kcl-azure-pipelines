@@ -1,3 +1,5 @@
+import ap.target
+
 schema Checkout:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-checkout
@@ -18,7 +20,7 @@ schema Checkout:
     condition?: str
     continueOnError?: bool
     displayName?: str
-    target?: str | any
+    target?: target.Target
     enabled?: bool
     env?: {str: str}
     name?: str

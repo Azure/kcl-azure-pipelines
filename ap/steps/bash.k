@@ -1,3 +1,5 @@
+import ap.target
+
 schema Bash:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-bash
@@ -9,7 +11,7 @@ schema Bash:
     condition?: str
     continueOnError?: bool
     displayName?: str
-    target?: str | any
+    target?: target.Target
     enabled?: bool
     env?: {str: str}
     name?: str

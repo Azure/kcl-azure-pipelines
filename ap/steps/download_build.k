@@ -1,3 +1,5 @@
+import ap.target
+
 schema DownloadBuild:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-download-build
@@ -10,7 +12,7 @@ schema DownloadBuild:
     condition?: str
     continueOnError?: bool
     displayName?: str
-    target?: str | any
+    target?: target.Target
     enabled?: bool
     env?: {str: str}
     name?: str

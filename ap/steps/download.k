@@ -1,3 +1,5 @@
+import ap.target
+
 schema Download:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-download
@@ -9,7 +11,7 @@ schema Download:
     condition?: str
     continueOnError?: bool
     displayName?: str
-    target?: str | any
+    target?: target.Target
     enabled?: bool
     env?: {str: str}
     name?: str

@@ -1,3 +1,5 @@
+import ap.target
+
 schema Publish:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-publish
@@ -8,7 +10,7 @@ schema Publish:
     condition?: str
     continueOnError?: bool
     displayName?: str
-    target?: str | any
+    target?: target.Target
     enabled?: bool
     env?: {str: str}
     name?: str

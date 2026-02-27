@@ -1,3 +1,5 @@
+import ap.target
+
 schema Pwsh:
     """
     https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-pwsh
@@ -11,7 +13,7 @@ schema Pwsh:
     condition?: str
     continueOnError?: bool
     displayName?: str
-    target?: str | any
+    target?: target.Target
     enabled?: bool
     env?: {str: str}
     name?: str
