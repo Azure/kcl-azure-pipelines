@@ -1,7 +1,7 @@
-import ap.jobs.deployment.deployment
+import ap.jobs.deployment
 import ap.jobs.job
-import ap.resources.resources
-import ap.steps.steps
+import ap.resources
+import ap.steps
 
 
 schema Pipeline:

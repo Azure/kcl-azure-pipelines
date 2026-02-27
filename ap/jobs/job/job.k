@@ -1,10 +1,7 @@
 import ap.pool
-import ap.steps.steps
+import ap.steps
 import ap.variables
 import ap.jobs.workspace
-import ap.jobs.job.container
-import ap.jobs.job.strategy
-import ap.jobs.job.uses
 
 schema Job:
     """
@@ -19,10 +16,10 @@ schema Job:
     timeoutInMinutes?: str
     cancelTimeoutInMinutes?: str
     variables?: variables.Variables
-    strategy?: strategy.Strategy
+    strategy?: Strategy
     pool?: str | pool.Pool
-    container?: str | container.Container
+    container?: str | Container
     services?: {str: str}
     workspace?: workspace.Workspace
-    uses?: uses.Uses
+    uses?: Uses
     steps?: [steps.Step]

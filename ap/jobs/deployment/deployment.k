@@ -1,10 +1,7 @@
 import ap.pool
 import ap.variables
-import ap.jobs.job.container
-import ap.jobs.job.uses
+import ap.jobs.job
 import ap.jobs.workspace
-import ap.jobs.deployment.environment
-import ap.jobs.deployment.strategy
 
 schema Deployment:
     """
@@ -20,10 +17,10 @@ schema Deployment:
     cancelTimeoutInMinutes?: str
     variables?: variables.Variables
     pool?: str | pool.Pool
-    environment: str | environment.Environment
-    strategy: strategy.Strategy
+    environment: str | Environment
+    strategy: Strategy
     workspace?: workspace.Workspace
-    uses?: uses.Uses
-    container?: str | container.Container
+    uses?: job.Uses
+    container?: str | job.Container
     services?: {str: str}
     templateContext?: {str: any}
