@@ -1,7 +1,5 @@
-import ap.extends
 import ap.jobs.deployment.deployment
 import ap.jobs.job
-import ap.parameters
 import ap.resources.resources
 import ap.steps.steps
 
@@ -14,7 +12,7 @@ schema Pipeline:
     name?: str
     pool?: str | Pool
     trigger?: Trigger
-    parameters?: [parameters.Parameter]
+    parameters?: [Parameter]
     pr?: PR
     schedules?: [Cron]
     resources?: resources.Resources
@@ -23,7 +21,7 @@ schema Pipeline:
     appendCommitMessageToRunName?: bool
 
     stages: [Stage | Template]
-    extends?: extends.Extends
+    extends?: Extends
     jobs?: [job.Job | deployment.Deployment | Template]
     steps?: [steps.Step]
 
