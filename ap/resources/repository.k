@@ -1,4 +1,4 @@
-import azure_pipelines.trigger
+import ap.trigger
 
 schema Repository:
     """

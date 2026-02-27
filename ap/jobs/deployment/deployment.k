@@ -1,10 +1,10 @@
-import azure_pipelines.pool
-import azure_pipelines.variables
-import azure_pipelines.jobs.job.container
-import azure_pipelines.jobs.job.uses
-import azure_pipelines.jobs.workspace
-import azure_pipelines.jobs.deployment.environment
-import azure_pipelines.jobs.deployment.strategy
+import ap.pool
+import ap.variables
+import ap.jobs.job.container
+import ap.jobs.job.uses
+import ap.jobs.workspace
+import ap.jobs.deployment.environment
+import ap.jobs.deployment.strategy
 
 schema Deployment:
     """

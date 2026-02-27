@@ -1,9 +1,9 @@
-import azure_pipelines.extends
-import azure_pipelines.jobs.deployment.deployment
-import azure_pipelines.jobs.job
-import azure_pipelines.parameters as params
-import azure_pipelines.resources.resources
-import azure_pipelines.steps.steps
+import ap.extends
+import ap.jobs.deployment.deployment
+import ap.jobs.job
+import ap.parameters
+import ap.resources.resources
+import ap.steps.steps
 
 
 schema Pipeline:
@@ -14,7 +14,7 @@ schema Pipeline:
     name?: str
     pool?: str | Pool
     trigger?: Trigger
-    parameters?: [params.Parameter]
+    parameters?: [parameters.Parameter]
     pr?: PR
     schedules?: [Cron]
     resources?: resources.Resources

@@ -1,4 +1,4 @@
-import azure_pipelines.jobs.job
+import ap.jobs.job
 
 schema Stage:
     """

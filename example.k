@@ -1,7 +1,7 @@
-import azure_pipelines as ap
-import azure_pipelines.include_exclude_filters
-import azure_pipelines.jobs.job
-import azure_pipelines.steps
+import ap
+import ap.include_exclude_filters
+import ap.jobs.job
+import ap.steps
 
 myPipeline: ap.Pipeline {
     name = "CI-Build"
