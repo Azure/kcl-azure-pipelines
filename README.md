@@ -18,7 +18,7 @@ Or add it to your `kcl.mod` file:
 
 ```toml
 [dependencies]
-telescope = { path = "https://github.com/Azure/kcl-azure-pipelines", version = "0.0.1" }
+azure_pipelines = { git = "https://github.com/Azure/kcl-azure-pipelines/", version = "0.1.0" }
 ```
 
 ## Usage
@@ -26,10 +26,10 @@ telescope = { path = "https://github.com/Azure/kcl-azure-pipelines", version = "
 Import the library and use the schemas to define your pipeline:
 
 ```kcl
-import ap
+import azure_pipelines.ap
 
 # Define your pipeline
-pipeline: ap.Pipeline {
+my_pipeline: ap.Pipeline {
     name = "CI-Build"
 
     trigger = ap.TriggerFull {
@@ -69,7 +69,7 @@ pipeline: ap.Pipeline {
 Generate the Azure Pipelines YAML:
 
 ```bash
-kcl run pipeline.k -S pipeline
+kcl run my_pipeline.k -S my_pipeline
 ```
 
 ## Documentation
