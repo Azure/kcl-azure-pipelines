@@ -20,7 +20,7 @@ schema Pipeline:
     lockBehavior?: "sequential" | "runLatest"
     appendCommitMessageToRunName?: bool
 
-    stages: [Stage | Template]
+    stages?: [Stage | Template]
     extends?: Extends
     jobs?: [job.Job | deployment.Deployment | Template]
     steps?: [steps.Step]
