@@ -13,8 +13,8 @@ schema Job:
     dependsOn?: str | [str]
     condition?: str
     continueOnError?: str
-    timeoutInMinutes?: str
-    cancelTimeoutInMinutes?: str
+    timeoutInMinutes?: int
+    cancelTimeoutInMinutes?: int
     variables?: variables.Variables
     strategy?: Strategy
     pool?: str | pool.Pool

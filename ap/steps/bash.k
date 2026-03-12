@@ -15,5 +15,5 @@ schema Bash:
     enabled?: bool
     env?: {str: str}
     name?: str
-    timeoutInMinutes?: str
+    timeoutInMinutes?: int
     retryCountOnTaskFailure?: str

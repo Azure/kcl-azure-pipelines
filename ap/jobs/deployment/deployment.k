@@ -13,8 +13,8 @@ schema Deployment:
     dependsOn?: str | [str]
     condition?: str
     continueOnError?: str
-    timeoutInMinutes?: str
-    cancelTimeoutInMinutes?: str
+    timeoutInMinutes?: int
+    cancelTimeoutInMinutes?: int
     variables?: variables.Variables
     pool?: str | pool.Pool
     environment: str | Environment
