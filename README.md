@@ -69,7 +69,7 @@ my_pipeline: ap.Pipeline {
 Generate the Azure Pipelines YAML:
 
 ```bash
-kcl run my_pipeline.k -S my_pipeline
+kcl run my_pipeline.k -S my_pipeline -o my_pipeline.yaml
 ```
 
 ## Documentation
