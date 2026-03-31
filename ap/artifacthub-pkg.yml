@@ -3,3 +3,7 @@ name: "azure-pipelines"
 displayName: "Azure Pipelines"
 createdAt: "2026-04-01T00:00:00+11:00"
 description: "Unofficial KCL schemas for Azure Pipelines YAML configuration"
+links: 
+  - name: "Source"
+    url: "https://github.com/Azure/kcl-azure-pipelines"
+install: "kcl mod add git://github.com/Azure/kcl-azure-pipelines --tag 1.0.0"
