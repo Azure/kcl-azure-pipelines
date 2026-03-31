@@ -1,0 +1,5 @@
+version: "1.0.0"
+name: "azure-pipelines"
+displayName: "Azure Pipelines"
+createdAt: "2026-04-01T00:00:00+11:00"
+description: "Unofficial KCL schemas for Azure Pipelines YAML configuration"
