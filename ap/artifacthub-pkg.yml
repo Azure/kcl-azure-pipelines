@@ -6,4 +6,10 @@ description: "Unofficial KCL schemas for Azure Pipelines YAML configuration"
 links: 
   - name: "Source"
     url: "https://github.com/Azure/kcl-azure-pipelines"
-install: "kcl mod add git://github.com/Azure/kcl-azure-pipelines --tag 1.0.0"
+install: |
+  ```
+  kcl mod add git://github.com/Azure/kcl-azure-pipelines --tag 1.0.0
+  ```
+readme: |
+  This is an unofficial KCL module for Azure Pipelines. 
+  For more details, read https://github.com/Azure/kcl-azure-pipelines/blob/main/README.md
