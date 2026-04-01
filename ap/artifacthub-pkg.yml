@@ -1,15 +1,13 @@
 version: "1.0.0"
-name: "azure-pipelines"
-displayName: "Azure Pipelines"
+name: azure-pipelines
+displayName: Azure Pipelines
 createdAt: "2026-04-01T00:00:00+11:00"
-description: "Unofficial KCL schemas for Azure Pipelines YAML configuration"
-links: 
-  - name: "Source"
-    url: "https://github.com/Azure/kcl-azure-pipelines"
+description: Unofficial KCL schemas for Azure Pipelines YAML configuration
+links:
+  - name: Source
+    url: https://github.com/Azure/kcl-azure-pipelines
 install: |
-  ```
   kcl mod add git://github.com/Azure/kcl-azure-pipelines --tag 1.0.0
-  ```
 readme: |
-  This is an unofficial KCL module for Azure Pipelines. 
+  This is an unofficial KCL module for Azure Pipelines.
   For more details, read https://github.com/Azure/kcl-azure-pipelines/blob/main/README.md
