@@ -5,3 +5,6 @@ schema Template:
 
     template: str
     parameters?: {str: any}
+
+    # _content is the used to produce Template yaml. It is not exported.
+    _content: any
